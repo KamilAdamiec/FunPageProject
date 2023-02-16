@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zostań fanem!</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="css/formStyles.css">
+</head>
+
+<body>
+    <h1>Mamy najlepszych fanów na świecie!</h1>
+    <div class="banner">
+        <img src="./assets/img/fans/fan1.jpg" alt="image1" class="active" />
+        <img src="./assets/img/fans/fan2.jpg" alt="image2" />
+        <img src="./assets/img/fans/fan3.jpg" alt="image3" />
+        <img src="./assets/img/fans/fan4.jpg" alt="image4" />
+        <img src="./assets/img/fans/fan5.jpg" alt="image5" />
+    </div>
+    <div class="container">
+        <div  class="title">Zostań fanem</div>
+        <div class="content">
+          <form id="formula" onsubmit="return sprawdz()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Imię</span>
+                        <input id="imie" type="text" name="imie" placeholder="Podaj swoje imię..." required title="Wprowadź poprawne imię">
+                        <div id="imie_error" class="czerwone"></div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nazwisko</span>
+                        <input id="nazwisko" type="text" name="nazwisko" placeholder="Podaj swoje nazwisko..." required title="Wprowadź poprawne nazwisko">
+                        <div id="nazwisko_error" class="czerwone"></div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input id="email" type="email" name="email" placeholder="Podaj swój adres e-mail..." required title="Wprowadź poprawne e-mail">
+                        <div id="email_error" class="czerwone"></div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Państwo</span>
+                        <select name="panstwo" id="panstwo" required >
+                            <option value="">.</option>
+                            <option value="Polska">Polska</option>
+                            <option value="Dania">Dania</option>
+                            <option value="Rosja">Rosja</option>
+                            <option value="Szwecja">Szwecja</option>
+                            <option value="Ukraina">Ukraina</option>
+                            <option value="Wielka Brytania">Wielka Brytania</option>
+                            <option value="Inne">Inne</option>
+                        </select>
+                    </div>
+                    <div class="choices">
+                        <span class="choices-title">Zaznacz sezony podczas których byłeś na co najmniej jednym meczu: </span><br><br>
+                        <input id="2017" type="checkbox" name="rok">2017
+                        <input id="2018" type="checkbox" name="rok">2018
+                        <input id="2019" type="checkbox" name="rok">2019
+                        <input id="2020" type="checkbox" name="rok">2020
+                        <input id="2021" type="checkbox" name="rok">2021
+                       
+                    </div>
+                    <div id="rok_error" class="czerwone"></div>
+                </div>
+                <div class="choices">
+                    <span class="choices-title">Płeć</span><br>
+                    <input type="radio"  name="genderName" value="Mężczyzna">Mężczyzna
+                    <input type="radio"  name="genderName" value="Kobieta">Kobieta
+                    <div id="gender_error" class="czerwone"></div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Dodaj fana">
+                </div>
+                <div class="button">
+                    <input id="showList" value="Pokaż listę wszystkich fanów" onclick="pokazListe()">
+                </div>
+                <div class="button">
+                    <input id="removeList" value="Usuń wszystkich fanów" onclick="usunListeFanow()">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="list">
+
+    </div>
+    <a class="powrot" href="index.html">Wróc do strony głównej</a>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
